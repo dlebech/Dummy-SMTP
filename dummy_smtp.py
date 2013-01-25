@@ -19,7 +19,7 @@ class DummySMTPServer(smtpd.SMTPServer):
         print 'New mail from %s' % mailfrom
         today = datetime.datetime.today()
         mail = open('%s/%s.eml' % (self.maildir,
-                                   today.strftime('%Y-%m-%d-%H:%M:%S')), 
+                                   today.strftime('%Y-%m-%d-%H%M%S')), 
                     'w')
         mail.write(data)
         mail.close()
